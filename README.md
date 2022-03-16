@@ -1,4 +1,6 @@
 # alicação feita para testar os conceitos de liquibase
+# doc
+https://docs.liquibase.com/
 
 ## start app e aplicar o script
 ```bash
