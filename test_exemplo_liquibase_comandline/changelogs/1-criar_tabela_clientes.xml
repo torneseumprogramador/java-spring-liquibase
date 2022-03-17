@@ -21,18 +21,5 @@
       </column>
       <column name="ativo" type="boolean" defaultValueBoolean="true"></column>
     </createTable>
-    <createTable tableName="pedidos">
-      <column name="id" type="bigint">
-        <constraints primaryKey="true" primaryKeyName="pedidos_id_pk" />
-      </column>
-      <column name="valor_total" type="float" />
-      <column name="cliente_id" type="bigint">
-        <constraints nullable="false" notNullConstraintName="pedidos_cliente_id_nn" />
-      </column>
-    </createTable>
-    <addAutoIncrement tableName="clientes" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
-    <addAutoIncrement tableName="pedidos" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
-    <createSequence sequenceName="hibernate_sequence" incrementBy="1" startValue="1" />
-    <addForeignKeyConstraint baseTableName="pedidos" baseColumnNames="cliente_id" constraintName="pedidos_cliente_id_fk" referencedTableName="pedidos" referencedColumnNames="id" />
   </changeSet>
 </databaseChangeLog>

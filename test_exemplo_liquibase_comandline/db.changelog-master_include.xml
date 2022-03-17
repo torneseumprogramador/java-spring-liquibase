@@ -3,7 +3,7 @@
   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
   http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
 
-  <!-- <include file="xml_include/criar_tabela_clientes_e_pedidos.xml" relativeToChangelogFile="true" /> -->
-  <includeAll path="xml_include" relativeToChangelogFile="true" />
+  <!-- <include file="changelogs/1-criar_tabela_clientes.xml" relativeToChangelogFile="true" /> -->
+  <includeAll path="changelogs" relativeToChangelogFile="true" />
 
 </databaseChangeLog>

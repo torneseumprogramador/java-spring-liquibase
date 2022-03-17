@@ -1,0 +1,87 @@
+databaseChangeLog:
+- changeSet:
+    id: 1647529358547-1
+    author: Danilo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+            name: nome
+            type: VARCHAR(150)
+        - column:
+            constraints:
+              nullable: false
+            name: telefone
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              unique: true
+            name: cpf
+            type: VARCHAR(30)
+        - column:
+            constraints:
+              unique: true
+            name: email
+            type: VARCHAR(250)
+        - column:
+            defaultValueBoolean: true
+            name: ativo
+            type: BIT(1)
+        tableName: clientes
+- changeSet:
+    id: 1647529358547-2
+    author: Danilo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: id
+            type: BIGINT
+        - column:
+            name: valor_total
+            type: FLOAT(12)
+        - column:
+            constraints:
+              nullable: false
+            name: cliente_id
+            type: BIGINT
+        tableName: pedidos
+- changeSet:
+    id: 1647529358547-3
+    author: Danilo (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: cliente_id
+        indexName: pedidos_cliente_id_fk
+        tableName: pedidos
+- changeSet:
+    id: 1647529358547-4
+    author: Danilo (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: cliente_id
+        baseTableName: pedidos
+        constraintName: pedidos_cliente_id_fk
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableName: pedidos
+        validate: true
+

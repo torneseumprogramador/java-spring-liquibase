@@ -1,0 +1,42 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <changeSet author="Danilo (generated)" id="1647529312114-1">
+        <createTable tableName="clientes">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="nome" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="telefone" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cpf" type="VARCHAR(30)">
+                <constraints unique="true"/>
+            </column>
+            <column name="email" type="VARCHAR(250)">
+                <constraints unique="true"/>
+            </column>
+            <column defaultValueBoolean="true" name="ativo" type="BIT(1)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Danilo (generated)" id="1647529312114-2">
+        <createTable tableName="pedidos">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="valor_total" type="FLOAT(12)"/>
+            <column name="cliente_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Danilo (generated)" id="1647529312114-3">
+        <createIndex indexName="pedidos_cliente_id_fk" tableName="pedidos">
+            <column name="cliente_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Danilo (generated)" id="1647529312114-4">
+        <addForeignKeyConstraint baseColumnNames="cliente_id" baseTableName="pedidos" constraintName="pedidos_cliente_id_fk" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="pedidos" validate="true"/>
+    </changeSet>
+</databaseChangeLog>
