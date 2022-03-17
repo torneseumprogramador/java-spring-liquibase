@@ -25,7 +25,7 @@ select * from clientes;
 select * from pedidos;
 ```
 
-# install liguibase manual
+# install liquibase manual
 https://docs.liquibase.com/install/liquibase-macos.html
 
 ## rodar update
