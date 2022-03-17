@@ -15,5 +15,8 @@
         <constraints nullable="false" notNullConstraintName="pedidos_cliente_id_nn" />
       </column>
     </createTable>
+    <rollback>
+      drop table pedidos;
+    </rollback>
   </changeSet>
 </databaseChangeLog>

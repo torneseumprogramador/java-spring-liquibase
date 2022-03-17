@@ -35,17 +35,19 @@ liquibase update
 liquibase update --changelog-file=db.changelog-master.yml # roda arquivo isolado
 liquibase --defaultsFile=liquibase.sql_server.properties update # aponta para o arquivo de config customizado
 ```
-## Adicionando tag na ultima migração executada
-```bash
-liquibase tag v1 # Gera tag do ultimo changelog rodado
-```
 
 ## rodar rollback
 ```bash     
 liquibase rollback v1  # faz rollback por tag
+liquibase rollbackOneUpdate --deploymentId=7529231118 --force  # o ID 7529231118 é o valor referente ao campo deployment_id da tabela DATABASECHANGELOG
 ```
 
 ## rodar export changlog de uma base existente
 ```bash
 liquibase --changeLogFile=dbchangelog.json generateChangeLog
+```
+
+## Adicionando tag na ultima migração executada, caso queria mudar a versão da tag atrelada
+```bash
+liquibase tag v1 # Gera tag do ultimo changelog rodado
 ```

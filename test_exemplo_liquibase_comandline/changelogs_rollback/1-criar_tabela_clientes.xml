@@ -25,5 +25,8 @@
       </column>
       <column name="ativo" type="boolean" defaultValueBoolean="true"></column>
     </createTable>
+    <rollback>
+      drop table clientes;
+    </rollback>
   </changeSet>
 </databaseChangeLog>
