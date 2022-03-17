@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+  http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
+  <changeSet id="tag-1.1" author="Danilo Aparecido">
+    <tagDatabase tag="1.1" />
+  </changeSet>
+  <changeSet id="20220316152801" author="Danilo Aparecido">
+    <createTable tableName="pedidos">
+      <column name="id" type="bigint">
+        <constraints primaryKey="true" primaryKeyName="pedidos_id_pk" />
+      </column>
+      <column name="valor_total" type="float" />
+      <column name="cliente_id" type="bigint">
+        <constraints nullable="false" notNullConstraintName="pedidos_cliente_id_nn" />
+      </column>
+    </createTable>
+    <rollback>
+      drop table pedidos;
+    </rollback>
+  </changeSet>
+</databaseChangeLog>

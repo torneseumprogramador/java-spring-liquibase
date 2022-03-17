@@ -4,6 +4,7 @@
   http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
 
   <!-- <include file="xml_include/criar_tabela_clientes_e_pedidos.xml" relativeToChangelogFile="true" /> -->
-  <includeAll path="xml_include" relativeToChangelogFile="true" />
+  <includeAll path="xml_rollback" relativeToChangelogFile="true" />
+  <!-- <includeAll path="xml_include" relativeToChangelogFile="true" /> -->
 
 </databaseChangeLog>
