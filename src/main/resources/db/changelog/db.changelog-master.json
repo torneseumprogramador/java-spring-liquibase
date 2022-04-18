@@ -3,7 +3,7 @@
     {
       "changeSet": {
         "id": "1",
-        "author": "nvoxland",
+        "author": "Danilo",
         "changes": [
           {
             "createTable": {
@@ -50,7 +50,7 @@
     {
       "changeSet": {
         "id": "2",
-        "author": "nvoxland",
+        "author": "Danilo",
         "changes": [
           {
             "addColumn": {
@@ -71,7 +71,7 @@
     {
       "changeSet": {
         "id": "3",
-        "author": "nvoxland",
+        "author": "Danilo",
         "changes": [
           {
             "addLookupTable": {
