@@ -5,6 +5,7 @@
 # Documentação
 - https://docs.liquibase.com/
 
+# Install
 - https://docs.liquibase.com/install/liquibase-macos.html
 
 # Download driver connector mysql
