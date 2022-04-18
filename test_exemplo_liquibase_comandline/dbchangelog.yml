@@ -82,6 +82,6 @@ databaseChangeLog:
         onDelete: RESTRICT
         onUpdate: RESTRICT
         referencedColumnNames: id
-        referencedTableName: pedidos
+        referencedTableName: clientes
         validate: true
 

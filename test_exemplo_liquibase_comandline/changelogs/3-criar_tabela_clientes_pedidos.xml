@@ -9,6 +9,6 @@
     <addAutoIncrement tableName="clientes" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
     <addAutoIncrement tableName="pedidos" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
     <!-- <createSequence sequenceName="hibernate_sequence" incrementBy="1" startValue="1" /> -->
-    <addForeignKeyConstraint baseTableName="pedidos" baseColumnNames="cliente_id" constraintName="pedidos_cliente_id_fk" referencedTableName="pedidos" referencedColumnNames="id" />
+    <addForeignKeyConstraint baseTableName="pedidos" baseColumnNames="cliente_id" constraintName="pedidos_cliente_id_fk" referencedTableName="clientes" referencedColumnNames="id" />
   </changeSet>
 </databaseChangeLog>

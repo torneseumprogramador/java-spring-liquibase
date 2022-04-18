@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
-    <changeSet author="Danilo (generated)" id="1647529312114-1">
+    <changeSet author="Danilo (generated)" id="202204181905">
         <createTable tableName="clientes">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true"/>
@@ -37,6 +37,6 @@
         </createIndex>
     </changeSet>
     <changeSet author="Danilo (generated)" id="1647529312114-4">
-        <addForeignKeyConstraint baseColumnNames="cliente_id" baseTableName="pedidos" constraintName="pedidos_cliente_id_fk" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="pedidos" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="cliente_id" baseTableName="pedidos" constraintName="pedidos_cliente_id_fk" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="clientes" validate="true"/>
     </changeSet>
 </databaseChangeLog>
