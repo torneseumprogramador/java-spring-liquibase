@@ -129,6 +129,12 @@ databaseChangeLog:
                 type:    TIMESTAMP
 ```
 
+# Configuração do liquibase 
+```shell
+vim liquibase.properties
+````
+
+# liquibase.properties
 ```yml
 changeLogFile: db.changelog-master_include_rollback.xml
 url: jdbc:mysql://localhost:3306/SpringLiquiBase?createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC
@@ -137,8 +143,10 @@ password: root
 classpath: mysql-connector-java-8.0.28.jar
 driver: com.mysql.cj.jdbc.Driver
 logLevel: DEBUG
-contexts: test # se produção ou teste
-liquibase.hub.mode: off # modo online - https://docs.liquibase.com/tools-integrations/liquibase-hub/properties.html
+# se produção ou teste
+contexts: test 
+# modo online - https://docs.liquibase.com/tools-integrations/liquibase-hub/properties.html
+liquibase.hub.mode: off 
 # liquibaseProLicenseKey: <paste license key> # para acesso ao pago com mais funções
 ```
 
