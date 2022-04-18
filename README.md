@@ -129,34 +129,7 @@ databaseChangeLog:
                 type:    TIMESTAMP
 ```
 
-<?xml version="1.0" encoding="UTF-8"?>
-<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
-  http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
-  <changeSet id="20220316152800" author="Danilo Aparecido">
-    <createTable tableName="clientes">
-      <column name="id" type="bigint">
-        <constraints primaryKey="true" primaryKeyName="clientes_id_pk" />
-      </column>
-      <column name="nome" type="varchar(150)">
-        <constraints nullable="false" notNullConstraintName="cliente_nome_nn" />
-      </column>
-      <column name="telefone" type="varchar(20)">
-        <constraints nullable="false" notNullConstraintName="cliente_telefone_nn" />
-      </column>
-      <column name="cpf" type="varchar(30)">
-        <constraints unique="true" uniqueConstraintName="clientes_cpf_unq" />
-      </column>
-      <column name="email" type="varchar(250)">
-        <constraints unique="true" uniqueConstraintName="clientes_email_unq" />
-      </column>
-      <column name="ativo" type="boolean" defaultValueBoolean="true"></column>
-    </createTable>
-  </changeSet>
-</databaseChangeLog>
-```
-
-```json
+```liquibase
 changeLogFile: db.changelog-master_include_rollback.xml
 url: jdbc:mysql://localhost:3306/SpringLiquiBase?createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC
 username: root
