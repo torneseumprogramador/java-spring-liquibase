@@ -9,6 +9,10 @@
 - https://www.mysql.com/products/connector/
 - mysql-connector-java-8.0.28.jar
 
+# Download driver connector postgresql
+- https://jdbc.postgresql.org/download.html
+- postgresql-42.3.4.jar
+
 # Install liquibase
 https://docs.liquibase.com/install/liquibase-macos.html
 
@@ -134,7 +138,7 @@ databaseChangeLog:
 vim liquibase.properties
 ````
 
-# liquibase.properties
+# liquibase.properties mysql
 ```yml
 changeLogFile: db.changelog-master_include_rollback.xml
 url: jdbc:mysql://localhost:3306/SpringLiquiBase?createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC
@@ -142,6 +146,23 @@ username: root
 password: root
 classpath: mysql-connector-java-8.0.28.jar
 driver: com.mysql.cj.jdbc.Driver
+logLevel: DEBUG
+# se produção ou teste
+contexts: test 
+# modo online - https://docs.liquibase.com/tools-integrations/liquibase-hub/properties.html
+liquibase.hub.mode: off 
+# liquibaseProLicenseKey: <paste license key> # para acesso ao pago com mais funções
+```
+
+# liquibase.properties postgressql
+- https://docs.liquibase.com/install/tutorials/postgresql.html
+```yml
+changeLogFile: db.changelog-master_include_rollback.xml
+url: jdbc:postgresql://localhost:5432/SpringLiquiBase?createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC
+username: root
+password: root
+classpath: postgresql-42.3.4.jar
+driver: org.postgresql.Driver
 logLevel: DEBUG
 # se produção ou teste
 contexts: test 
