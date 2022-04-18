@@ -137,8 +137,9 @@ password: root
 classpath: mysql-connector-java-8.0.28.jar
 driver: com.mysql.cj.jdbc.Driver
 logLevel: DEBUG
-contexts: test
+contexts: test # se produção ou teste
 liquibase.hub.mode=off
+# liquibaseProLicenseKey: <paste license key> # para acesso ao pago com mais funções
 ```
 
 ## Rodar update
