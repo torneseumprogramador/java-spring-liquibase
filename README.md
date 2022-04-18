@@ -1,14 +1,14 @@
-# alicação feita para testar os conceitos de liquibase
-# doc
+# O que é o liquibase
+- Aplicação para gerenciar evolução de um banco de dados (Migrations)
+- https://liquibase.com/
+
+# Documentação
 https://docs.liquibase.com/
 
-## start app e aplicar o script
-```bash
-gradle bootRun
-```
 
 # download drivers mysql
-https://www.mysql.com/products/connector/
+- https://www.mysql.com/products/connector/
+- mysql-connector-java-8.0.28.jar
 
 # modificar tabelas
 ## alterar o arquivo que está em src/resources/db/changelog
@@ -50,4 +50,9 @@ liquibase --changeLogFile=dbchangelog.json generateChangeLog
 ## Adicionando tag na ultima migração executada, caso queria mudar a versão da tag atrelada
 ```bash
 liquibase tag v1 # Gera tag do ultimo changelog rodado
+```
+
+## Start app e aplicar o script liquibase em JavaSpring Boot e Gradle
+```bash
+gradle bootRun
 ```
