@@ -54,7 +54,8 @@ out/
 .mtj.tmp/
 
 # Package Files #
-*.jar
+gradle*.jar
+*SNAPSHOT*.jar
 *.war
 *.nar
 *.ear
