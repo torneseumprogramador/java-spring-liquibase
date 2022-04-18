@@ -156,9 +156,22 @@ databaseChangeLog:
 </databaseChangeLog>
 ```
 
+```liquibase
+changeLogFile: db.changelog-master_include_rollback.xml
+url: jdbc:mysql://localhost:3306/SpringLiquiBase?createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC
+username: root
+password: root
+classpath: mysql-connector-java-8.0.28.jar
+driver: com.mysql.cj.jdbc.Driver
+logLevel: DEBUG
+contexts: test
+liquibase.hub.mode=off
+```
+
 ## Rodar update
 ```bash
-vim test_exemplo_liquibase_comandline/liquibase.properties # configurar o arquivo
+cd test_exemplo_liquibase_comandline
+vim liquibase.properties # configurar o arquivo
 liquibase update
 liquibase update --changelog-file=db.changelog-master.yml # roda arquivo isolado
 liquibase --defaultsFile=liquibase.sql_server.properties update # aponta para o arquivo de config customizado
