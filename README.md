@@ -156,7 +156,7 @@ databaseChangeLog:
 </databaseChangeLog>
 ```
 
-```liquibase
+```json
 changeLogFile: db.changelog-master_include_rollback.xml
 url: jdbc:mysql://localhost:3306/SpringLiquiBase?createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC
 username: root
