@@ -158,6 +158,7 @@ liquibase.hub.mode: off
 ```
 
 # liquibase.properties postgressql
+- https://www.liquibase.org/get-started/quickstart
 - https://docs.liquibase.com/install/tutorials/postgresql.html
 ```yml
 changeLogFile: db.changelog-master_include_rollback.xml
