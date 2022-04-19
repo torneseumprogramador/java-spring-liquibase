@@ -72,11 +72,11 @@
     </dropColumn>  
   </changeSet> -->
 
-  <changeSet id="20220316153600" author="Danilo Santos">
+  <!-- <changeSet id="20220316153600" author="Danilo Santos">
     <dropTable tableName="clientes" />
     <dropTable tableName="pedidos" />
-    <!-- <dropTable tableName="DATABASECHANGELOG;" />
-    <dropTable tableName="DATABASECHANGELOGLOCK;" /> -->
-  </changeSet>
+    <dropTable tableName="DATABASECHANGELOG;" />
+    <dropTable tableName="DATABASECHANGELOGLOCK;" />
+  </changeSet> -->
 
 </databaseChangeLog>
