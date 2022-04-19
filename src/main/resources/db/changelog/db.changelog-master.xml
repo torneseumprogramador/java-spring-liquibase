@@ -56,11 +56,11 @@
     </loadData>
   </changeSet>
 
-  <!-- <changeSet  author="Danilo"  id="20220317152900">  
+  <changeSet  author="Danilo"  id="20220317152900">  
       <sql>
         insert into clientes(nome, email, telefone, cpf, ativo)values('Joao', 'joao@gmail.com', '(11)00000-2202', '333.333.222-11', true)  
       </sql>  
-  </changeSet> -->
+  </changeSet>
 
   <!-- <changeSet  author="liquibase-docs"  id="modifyDataType-example">  
       <modifyDataType columnName="quantidade"  
@@ -72,11 +72,11 @@
     </dropColumn>  
   </changeSet> -->
 
-  <!-- <changeSet id="20220316153600" author="Danilo Santos">
+  <changeSet id="20220316153600" author="Danilo Santos">
     <dropTable tableName="clientes" />
     <dropTable tableName="pedidos" />
-    <dropTable tableName="DATABASECHANGELOG;" />
-    <dropTable tableName="DATABASECHANGELOGLOCK;" />
-  </changeSet> -->
+    <!-- <dropTable tableName="DATABASECHANGELOG;" />
+    <dropTable tableName="DATABASECHANGELOGLOCK;" /> -->
+  </changeSet>
 
 </databaseChangeLog>
